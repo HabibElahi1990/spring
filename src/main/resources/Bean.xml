@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <beans>
+        <!--use class-->
+        <bean id="person" class="springCore.Person">
+            <property name="firstName" value="Habib"/>
+            <property name="lastName" value="Elahi"/>
+        </bean>
+
+         <!--use alias-->
+        <alias name="person" alias="person2"/>
+
+
+        <!--use factory-method-->
+        <bean id="person3" class="springCore.Person" factory-method="person"/>
+
+        <!--use nested class-->
+        <bean id="nested" class="springCore.Person.NestedClass">
+            <property name="id" value="100"/>
+        </bean>
+
+        <bean id="student" class="springCore.Student">
+            <property name="nationalCode" value="119090244"/>
+        </bean>
+
+        <!--use factory methos instance-->
+        <bean id="book" factory-bean="student" factory-method="createBookInstance">
+            <property name="name" value="Math"/>
+            <property name="unit" value="4"/>
+        </bean>
+
+    </beans>
+
+
+
+
+</beans>
