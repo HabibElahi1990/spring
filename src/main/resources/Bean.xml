@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <beans>
-        <!--use class-->
+        <!--use class person-->
+        <!--use collection map and set null to property-->
         <bean id="person" class="springCore.Person">
             <property name="firstName" value="Habib"/>
             <property name="lastName" value="Elahi"/>
+            <property name="personType">
+                <map>
+                    <entry key="1" value="individual person"/>
+                    <entry key="2" value="corporate person"/>
+                    <entry key="3">
+                        <null/>
+                    </entry>
+                </map>
+            </property>
         </bean>
 
          <!--use alias-->
@@ -16,15 +27,17 @@
 
 
         <!--use factory-method-->
-        <bean id="person3" class="springCore.Person" factory-method="person"/>
+        <bean id="person3" class="springCore.Person" factory-method="setPerson"/>
 
         <!--use nested class-->
         <bean id="nested" class="springCore.Person.NestedClass">
             <property name="id" value="100"/>
         </bean>
 
+         <!--DI and constructor arg in spring-->
         <bean id="student" class="springCore.Student">
-            <property name="nationalCode" value="119090244"/>
+            <constructor-arg name="person" ref="person"/>
+            <constructor-arg name="nationalCode" value="11900"/>
         </bean>
 
         <!--use factory methos instance-->
@@ -32,6 +45,47 @@
             <property name="name" value="Math"/>
             <property name="unit" value="4"/>
         </bean>
+
+        <bean id="university" class="springCore.University">
+            <property name="student" ref="student"/>
+            <property name="universityName" value="Test"/>
+        </bean>
+
+        <!--use list collection and reference to city bean-->
+        <bean id="province" class="springCore.Province">
+            <property name="id" value="1"/>
+            <property name="name" value="Isfahan"/>
+            <property name="cityList">
+                <list>
+                    <ref bean="city"/>
+                    <ref bean="city1"/>
+                    <ref bean="city2"/>
+                    <ref bean="city3"/>
+                </list>
+            </property>
+        </bean>
+
+        <bean id="city" class="springCore.City">
+            <property name="name" value="Isfahan"/>
+            <property name="id" value="1"/>
+        </bean>
+        <bean id="city1" class="springCore.City">
+            <property name="name" value="Shahreza"/>
+            <property name="id" value="2"/>
+        </bean>
+        <bean id="city2" class="springCore.City">
+            <property name="name" value="Semirom"/>
+            <property name="id" value="3"/>
+        </bean>
+
+        <!--use XML Shortcut with the p-namespace-->
+        <!--use  xmlns:p="http://www.springframework.org/schema/p" in the beans initial-->
+        <bean id="city3" class="springCore.City" p:id="4" p:name="Dehaghan" />
+
+        <!--use depend_on and befor initial beanone , beantwo bacom initial-->
+        <!--if use  lazy-init="true" for each other beans , that bean initialize when that had request-->
+        <bean id="beanOne" class="springCore.BeanOne" depends-on="beanTwo"/>
+        <bean id="beanTwo" class="springCore.BeanTwo"/>
 
     </beans>
 

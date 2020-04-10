@@ -1,8 +1,16 @@
 package springCore;
 
+import java.beans.ConstructorProperties;
+
 public class Student {
+    private Person person;
     private static Book book=new Book();
     private Integer nationalCode;
+
+    public Student(Person person, Integer nationalCode) {
+        this.person = person;
+        this.nationalCode = nationalCode;
+    }
 
     public Integer getNationalCode() {
         return nationalCode;
@@ -19,8 +27,9 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "nationalCode=" + nationalCode + "   \n"+
-                 book.toString() +
+                "person=" + person +
+                "book=" + book+
+                ", nationalCode=" + nationalCode +
                 '}';
     }
 }
