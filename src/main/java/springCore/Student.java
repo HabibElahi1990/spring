@@ -1,10 +1,8 @@
 package springCore;
 
-import java.beans.ConstructorProperties;
-
 public class Student {
     private Person person;
-    private static Book book=new Book();
+    private static Book book = new Book();
     private Integer nationalCode;
 
     public Student(Person person, Integer nationalCode) {
@@ -20,7 +18,7 @@ public class Student {
         this.nationalCode = nationalCode;
     }
 
-    public Book createBookInstance(){
+    public Book createBookInstance() {
         return book;
     }
 
@@ -28,7 +26,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "person=" + person +
-                "book=" + book+
+                "book=" + book +
                 ", nationalCode=" + nationalCode +
                 '}';
     }

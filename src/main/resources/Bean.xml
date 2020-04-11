@@ -8,7 +8,7 @@
     <beans>
         <!--use class person-->
         <!--use collection map and set null to property-->
-        <bean id="person" class="springCore.Person">
+        <bean id="person" class="springCore.Person" >
             <property name="firstName" value="Habib"/>
             <property name="lastName" value="Elahi"/>
             <property name="personType">
@@ -27,7 +27,7 @@
 
 
         <!--use factory-method-->
-        <bean id="person3" class="springCore.Person" factory-method="setPerson"/>
+        <bean id="person3" class="springCore.Person" factory-method="setPerson" scope="prototype"/>
 
         <!--use nested class-->
         <bean id="nested" class="springCore.Person.NestedClass">
@@ -35,7 +35,8 @@
         </bean>
 
          <!--DI and constructor arg in spring-->
-        <bean id="student" class="springCore.Student">
+         <!--prototype scope-->
+        <bean id="student" class="springCore.Student" scope="prototype">
             <constructor-arg name="person" ref="person"/>
             <constructor-arg name="nationalCode" value="11900"/>
         </bean>
