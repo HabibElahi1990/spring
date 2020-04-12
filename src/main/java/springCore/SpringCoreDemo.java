@@ -42,8 +42,11 @@ public class SpringCoreDemo {
         BeanOne beanOne = (BeanOne) context.getBean("beanOne");
         beanOne.doSomthing();
         //BeanTwo Initialized
-        //BeanOne Initialized
+        //BeanOne BeanOne constructor
+        //BeanOne init
         //Inside doSomthing() method of BeanOne
         //Inside doSomthing() method of BeanTwo
+        // BeanOne destroy
+        ((ClassPathXmlApplicationContext) context).close();
     }
 }

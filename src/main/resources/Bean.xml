@@ -85,7 +85,7 @@
 
         <!--use depend_on and befor initial beanone , beantwo bacom initial-->
         <!--if use  lazy-init="true" for each other beans , that bean initialize when that had request-->
-        <bean id="beanOne" class="springCore.BeanOne" depends-on="beanTwo"/>
+        <bean id="beanOne" class="springCore.BeanOne" depends-on="beanTwo" init-method="init" destroy-method="destroy"/>
         <bean id="beanTwo" class="springCore.BeanTwo"/>
 
     </beans>
