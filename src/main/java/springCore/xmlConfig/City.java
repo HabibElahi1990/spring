@@ -1,4 +1,4 @@
-package springCore;
+package springCore.xmlConfig;
 
 public class City {
     private Integer id;

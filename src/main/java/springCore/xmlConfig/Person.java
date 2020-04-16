@@ -1,4 +1,4 @@
-package springCore;
+package springCore.xmlConfig;
 
 import java.util.Map;
 
