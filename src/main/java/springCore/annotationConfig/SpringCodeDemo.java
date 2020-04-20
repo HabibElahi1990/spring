@@ -17,7 +17,16 @@ public class SpringCodeDemo {
         //3) Person{id=1, code='931009', personType=1}
         //4) person destroy method
 
+        Contract contract=context.getBean(Contract.class);
+        Template template=context.getBean(Template.class);
+        template.setTemplateNumber("1398/10000/10");
+        contract.setContractNumber("1398/500/10");
+        System.out.println(contract.toString());
+        //Contract{contractNumber='1398/500/10', template=Template{templateNumber='1398/10000/10'}}
+
         ((AnnotationConfigApplicationContext) context).close();
+
+
 
     }
 }
