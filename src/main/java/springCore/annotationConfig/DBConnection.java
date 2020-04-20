@@ -16,7 +16,6 @@ public class DBConnection {
     private String dbDriver;
     @Value("${db_connection}")
     private String dbConnection;
-    @Value("${db_user}")
     private String dbUser;
     @Value("${db_password}")
     private String dbPassword;
@@ -70,5 +69,15 @@ public class DBConnection {
 
     public void setDbPassword(String dbPassword) {
         this.dbPassword = dbPassword;
+    }
+
+    @Override
+    public String toString() {
+        return "DBConnection{" +
+                "dbDriver='" + dbDriver + '\'' +
+                ", dbConnection='" + dbConnection + '\'' +
+                ", dbUser='" + dbUser + '\'' +
+                ", dbPassword='" + dbPassword + '\'' +
+                '}';
     }
 }

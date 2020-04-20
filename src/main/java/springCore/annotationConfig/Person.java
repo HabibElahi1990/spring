@@ -2,6 +2,10 @@ package springCore.annotationConfig;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+
 @Component
 public class Person {
 
@@ -44,6 +48,16 @@ public class Person {
 
     public void setPersonType(Integer personType) {
         this.personType = personType;
+    }
+
+    @PostConstruct
+    public void postConstruct(){
+        System.out.println("person PostConstruct");
+    }
+
+    @PreDestroy
+    public void preDestroy(){
+        System.out.println("person PreDestroy");
     }
 
     @Override
