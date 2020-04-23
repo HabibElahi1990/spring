@@ -14,3 +14,4 @@ This repository is about core of spring
 
     * Spring AOP (@EnableAspectJAutoProxy , @Aspect , @Before , @After , @AfterReturnin , @AfterThrowing , @Pointcut , @Around)
     Logger class for example and describe
+    or spring-aop-diagram.jpg
