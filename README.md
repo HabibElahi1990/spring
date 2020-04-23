@@ -1,4 +1,4 @@
-# springCore
+# spring
 This repository is about core of spring
 
     * The IoC Container
@@ -11,3 +11,6 @@ This repository is about core of spring
     
     *  SpEL (Arithmetic Operators,Relational and Logical Operators,Conditional Operators)
     use @Value
+
+    * Spring AOP (@EnableAspectJAutoProxy , @Aspect , @Before , @After , @AfterReturnin , @AfterThrowing , @Pointcut , @Around)
+    Logger class for example and describe
