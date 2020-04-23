@@ -1,4 +1,4 @@
-package springAOP;
+package springCore.springAOP;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

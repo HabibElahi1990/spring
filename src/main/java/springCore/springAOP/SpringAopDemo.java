@@ -1,4 +1,4 @@
-package springAOP;
+package springCore.springAOP;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
