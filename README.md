@@ -15,3 +15,10 @@ This repository is about core of spring
     * Spring AOP (@EnableAspectJAutoProxy , @Aspect , @Before , @After , @AfterReturnin , @AfterThrowing , @Pointcut , @Around)
     Logger class for example and describe
     or spring-aop-diagram.jpg
+ 
+    * Spring Test
+        * Junit (@RunWith , @ContextConfiguration , @FixMethodOrder ,
+         @BeforeClass , @AfterClass , @Before , @After , @Test ,  @Ignore)
+         Assert (assertEquals,assertSame,assertNotSame,assertNotNull,assertNull, assertTrue,assertArrayEquals)
+         
+        * 
