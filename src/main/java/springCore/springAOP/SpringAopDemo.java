@@ -10,5 +10,13 @@ public class SpringAopDemo {
         person.setFirstName("Habib");
         person.setLastName("Elahi");
         System.out.println(person.toString());
+
+        /*
+        execution aroundMethod toString method in springCore.springAOP package
+        execution before toString method in springCore.springAOP package
+        execution after toString method in springCore.springAOP package
+        execution afterReturning toString method in springCore.springAOP package
+        Person{firstName='Habib', lastName='Elahi', age=29}
+         */
     }
 }
