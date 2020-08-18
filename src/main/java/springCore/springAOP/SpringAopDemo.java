@@ -18,5 +18,20 @@ public class SpringAopDemo {
         execution afterReturning toString method in springCore.springAOP package
         Person{firstName='Habib', lastName='Elahi', age=29}
          */
+
+
+        Employee employee=context.getBean(Employee.class);
+        employee.setName("Habib");
+        employee.getName();
+        System.out.println(employee.toString());
+
+        /*
+        Executing beforeAdvice!!
+Executing afterAdvice!!
+Object.gerName =Habib
+before Around Method
+after Around Method
+Employee{name='Habib'}
+         */
     }
 }
