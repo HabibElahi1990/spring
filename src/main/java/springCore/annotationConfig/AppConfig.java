@@ -5,7 +5,7 @@ import org.springframework.context.annotation.*;
 import springCore.springExpressionLanguage.OperatorsClass;
 
 @Configuration
-@ComponentScan(basePackages = "springCore",basePackageClasses = {OperatorsClass.class})
+@ComponentScan(basePackages = "springCore.annotationConfig",basePackageClasses = {OperatorsClass.class})
 public class AppConfig {
 
     @Bean(initMethod = "initMethod", destroyMethod = "destroyMethod")
