@@ -22,3 +22,8 @@ This repository is about core of spring
          Assert (assertEquals,assertSame,assertNotSame,assertNotNull,assertNull, assertTrue,assertArrayEquals)
         
         * TDD test
+        
+    * spring JDBC(DriverManagerDataSource class for create datasource ,
+     JdbcTemplate class(execute,update,query),
+     use RowMapper for get DB records and set in java objects and us in jdbcTemplate
+    , this class is similar to prepareStatment in JAVA JDBC)
