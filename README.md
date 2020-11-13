@@ -23,6 +23,8 @@ This repository is about core of spring
         
         * TDD test
         
+        * mockito test (@RunWith(MockitoJUnitRunner.class), @InjectMocks,@Mock,mock method,when().thenReturn(),anyLong())
+        
     * spring JDBC(DriverManagerDataSource class for create datasource ,
      JdbcTemplate class(execute,update,query),
      use RowMapper for get DB records and set in java objects and us in jdbcTemplate
