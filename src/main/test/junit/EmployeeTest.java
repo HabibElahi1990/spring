@@ -10,9 +10,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import springCore.annotationConfig.AppConfig;
-import springCore.annotationConfig.DBConnection;
-import springCore.annotationConfig.Employee;
+import spring.annotationConfig.AppConfig;
+import spring.annotationConfig.DBConnection;
+import spring.annotationConfig.Employee;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

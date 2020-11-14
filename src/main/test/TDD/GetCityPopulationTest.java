@@ -2,7 +2,7 @@ package TDD;
 
 import org.junit.Before;
 import org.junit.Test;
-import springCore.TDDService.CityPopulationService;
+import spring.TDDService.CityPopulationService;
 
 import static org.junit.Assert.assertEquals;
 

@@ -12,9 +12,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.runners.MockitoJUnitRunner;
-import springCore.mockitoServices.service.UserService;
-import springCore.mockitoServices.service.impl.UserRuleService;
-import springCore.mockitoServices.service.impl.UserServiceImpl;
+import spring.mockitoServices.service.UserService;
+import spring.mockitoServices.service.impl.UserRuleService;
+import spring.mockitoServices.service.impl.UserServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;

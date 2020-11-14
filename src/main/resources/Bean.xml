@@ -8,7 +8,7 @@
     <beans>
         <!--use class person-->
         <!--use collection map and set null to property-->
-        <bean id="person" class="springCore.xmlConfig.Person" >
+        <bean id="person" class="spring.xmlConfig.Person" >
             <property name="firstName" value="Habib"/>
             <property name="lastName" value="Elahi"/>
             <property name="personType">
@@ -27,16 +27,16 @@
 
 
         <!--use factory-method-->
-        <bean id="person3" class="springCore.xmlConfig.Person" factory-method="setPerson" scope="prototype"/>
+        <bean id="person3" class="spring.xmlConfig.Person" factory-method="setPerson" scope="prototype"/>
 
         <!--use nested class-->
-        <bean id="nested" class="springCore.xmlConfig.Person.NestedClass">
+        <bean id="nested" class="spring.xmlConfig.Person.NestedClass">
             <property name="id" value="100"/>
         </bean>
 
          <!--DI and constructor arg in spring-->
          <!--prototype scope-->
-        <bean id="student" class="springCore.xmlConfig.Student" scope="prototype">
+        <bean id="student" class="spring.xmlConfig.Student" scope="prototype">
             <constructor-arg name="person" ref="person"/>
             <constructor-arg name="nationalCode" value="11900"/>
         </bean>
@@ -47,13 +47,13 @@
             <property name="unit" value="4"/>
         </bean>
 
-        <bean id="university" class="springCore.xmlConfig.University">
+        <bean id="university" class="spring.xmlConfig.University">
             <property name="student" ref="student"/>
             <property name="universityName" value="Test"/>
         </bean>
 
         <!--use list collection and reference to city bean-->
-        <bean id="province" class="springCore.xmlConfig.Province">
+        <bean id="province" class="spring.xmlConfig.Province">
             <property name="id" value="1"/>
             <property name="name" value="Isfahan"/>
             <property name="cityList">
@@ -66,27 +66,27 @@
             </property>
         </bean>
 
-        <bean id="city" class="springCore.xmlConfig.City">
+        <bean id="city" class="spring.xmlConfig.City">
             <property name="name" value="Isfahan"/>
             <property name="id" value="1"/>
         </bean>
-        <bean id="city1" class="springCore.xmlConfig.City">
+        <bean id="city1" class="spring.xmlConfig.City">
             <property name="name" value="Shahreza"/>
             <property name="id" value="2"/>
         </bean>
-        <bean id="city2" class="springCore.xmlConfig.City">
+        <bean id="city2" class="spring.xmlConfig.City">
             <property name="name" value="Semirom"/>
             <property name="id" value="3"/>
         </bean>
 
         <!--use XML Shortcut with the p-namespace-->
         <!--use  xmlns:p="http://www.springframework.org/schema/p" in the beans initial-->
-        <bean id="city3" class="springCore.xmlConfig.City" p:id="4" p:name="Dehaghan" />
+        <bean id="city3" class="spring.xmlConfig.City" p:id="4" p:name="Dehaghan" />
 
         <!--use depend_on and befor initial beanone , beantwo bacom initial-->
         <!--if use  lazy-init="true" for each other beans , that bean initialize when that had request-->
-        <bean id="beanOne" class="springCore.xmlConfig.BeanOne" depends-on="beanTwo" init-method="init" destroy-method="destroy"/>
-        <bean id="beanTwo" class="springCore.xmlConfig.BeanTwo"/>
+        <bean id="beanOne" class="spring.xmlConfig.BeanOne" depends-on="beanTwo" init-method="init" destroy-method="destroy"/>
+        <bean id="beanTwo" class="spring.xmlConfig.BeanTwo"/>
 
     </beans>
 

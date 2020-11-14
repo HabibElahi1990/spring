@@ -1,14 +1,13 @@
 package junit;
 
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
-import springCore.springJDBC.DataSourceConfiguration;
-import springCore.springJDBC.JDBCTest;
-import springCore.springJDBC.JdbTestMapper;
+import spring.springJDBC.DataSourceConfiguration;
+import spring.springJDBC.JDBCTest;
+import spring.springJDBC.JdbTestMapper;
 
 import java.util.List;
 
