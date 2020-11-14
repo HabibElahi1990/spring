@@ -20,7 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Matchers.anyInt;
 import static org.mockito.Matchers.anyLong;
@@ -48,7 +49,7 @@ public class MockitoTest {
     }
 
     //this test show return multi values
-    @Test
+    @Test(expected = RuntimeException.class)
     public void analyseListMock() {
         List list = mock(List.class);
         when(list.size()).thenReturn(2).thenReturn(3);
@@ -137,8 +138,8 @@ public class MockitoTest {
 
         List integerMockList = mock(List.class);
         integerMockList.add(1);
-        verify(integerMockList,atLeast(1)).add(1);
-        assertEquals(0,integerMockList.size());
+        verify(integerMockList, atLeast(1)).add(1);
+        assertEquals(0, integerMockList.size());
 
         List integerSpyList = spy(new ArrayList());
         integerSpyList.add(1);
