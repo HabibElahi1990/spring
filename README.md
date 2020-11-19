@@ -1,5 +1,5 @@
 # spring
-This repository is about core of spring
+This repository is about core of spring , unitTest(Junit,mock,TDD) and spring JDBC
 
     * The IoC Container
         * xml-config (bean,alias,collection,factory-method,DI,constructor-arg,
